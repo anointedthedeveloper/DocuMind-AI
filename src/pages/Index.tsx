@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { ScanLine, Sparkles } from "lucide-react";
+import { ScanLine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import DocumentUpload from "@/components/DocumentUpload";
@@ -186,10 +186,22 @@ const Index = () => {
           onDelete={(id) => setDocuments((prev) => prev.filter((d) => d.id !== id))}
         />
 
-        <div className="text-center pt-8 pb-4">
-          <p className="text-xs text-muted-foreground flex items-center justify-center gap-1">
-            <Sparkles className="h-3 w-3" />
-            Powered by Tesseract.js OCR + Lovable AI
+        <div className="text-center pt-8 pb-4 space-y-1">
+          <p className="text-xs text-muted-foreground">
+            Powered by{" "}
+            <a href="https://anobyte.online" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground transition-colors">
+              Anobyte
+            </a>
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Built by{" "}
+            <a href="https://github.com/anointedthedeveloper" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground transition-colors">
+              anointedthedeveloper
+            </a>
+            {" · "}
+            <a href="https://github.com/anointedthedeveloper/DocuMind-AI" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground transition-colors">
+              GitHub
+            </a>
           </p>
         </div>
       </main>
